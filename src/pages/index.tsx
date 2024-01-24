@@ -201,7 +201,7 @@ export default function Home() {
             flexDir="column"
           >
             <Text fontSize="1.5rem" fontWeight="bold" textAlign="center">
-              2.000m²
+              256.000m²
             </Text>
             <Text textAlign="center" color="#555">
               Área total
@@ -361,7 +361,7 @@ export default function Home() {
         </Text>
         {dimensions.isMobile ? (
           <Button
-            mb="40px"
+            mb="80px"
             onClick={() => {
               router.push("https://wa.me/5562981268480");
             }}
@@ -373,7 +373,7 @@ export default function Home() {
           </Button>
         ) : (
           <Button
-            mb="40px"
+            mb="80px"
             onClick={() => {
               router.push("https://wa.me/5562981268480");
             }}
