@@ -370,7 +370,7 @@ export default function Home() {
             size={dimensions.isDesktop ? "md" : "sm"}
             fontSize={dimensions.isDesktop ? "md" : "sm"}
           >
-            mx="auto" Entre em contato
+            Entre em contato
           </Button>
         ) : (
           <Button
