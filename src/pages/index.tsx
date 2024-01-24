@@ -71,8 +71,11 @@ export default function Home() {
     <>
       <Head>
         <title>🌾 Excelente oportunidade!</title>
-        
-        <meta name="description" content="Excelente Oportunidade de Chacara À Venda em Abadiania - GO" />
+
+        <meta
+          name="description"
+          content="Excelente Oportunidade de Chacara À Venda em Abadiania - GO"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -351,41 +354,57 @@ export default function Home() {
         >
           <ImageList />
         </Flex>
+
         <Text
           mt="10px"
           textAlign="center"
-          color="#555"
-          mb="20px"
-          fontSize={dimensions.isDesktop ? "1.5rem" : "1.3rem"}
+          color="#333"
+          fontSize={dimensions.isDesktop ? "2rem" : "1.3rem"}
         >
-          Se interessou? Essa é a sua chance!
+          Essa propriedade está sendo vendida por apenas
         </Text>
-        {dimensions.isMobile ? (
-          <Button
-            mb="80px"
-            onClick={() => {
-              router.push("https://wa.me/5562981268480");
-            }}
-            maxW="sm"
-            size={dimensions.isDesktop ? "md" : "sm"}
-            fontSize={dimensions.isDesktop ? "md" : "sm"}
-          >
-            Entre em contato
-          </Button>
-        ) : (
-          <Button
-            mb="80px"
-            onClick={() => {
-              router.push("https://wa.me/5562981268480");
-            }}
-            mx="auto"
-            maxW="sm"
-            size={dimensions.isDesktop ? "md" : "sm"}
-            fontSize={dimensions.isDesktop ? "md" : "sm"}
-          >
-            Entre em contato com o proprietário
-          </Button>
-        )}
+        <Text
+          fontWeight="bold"
+          mt="10px"
+          textAlign="center"
+          color="#333"
+          mb="20px"
+          fontSize={dimensions.isDesktop ? "3.5rem" : "2.5rem"}
+        >
+          R$ 2.900.000,00
+        </Text>
+        <Flex px="20px" w="100%">
+          {dimensions.isMobile ? (
+            <Button
+              mb="80px"
+              onClick={() => {
+                router.push("https://wa.me/5562981268480");
+              }}
+              maxW="sm"
+              px="20px"
+              w="100%"
+              size={dimensions.isDesktop ? "md" : "sm"}
+              fontSize={dimensions.isDesktop ? "md" : "sm"}
+            >
+              Entre em contato
+            </Button>
+          ) : (
+            <Button
+              mb="80px"
+              onClick={() => {
+                router.push("https://wa.me/5562981268480");
+              }}
+              px="20px"
+              mx="auto"
+              w="100%"
+              maxW="sm"
+              size={dimensions.isDesktop ? "md" : "sm"}
+              fontSize={dimensions.isDesktop ? "md" : "sm"}
+            >
+              Entre em contato com o proprietário
+            </Button>
+          )}
+        </Flex>
       </Flex>
       <Modal
         isOpen={activeImage !== ""}
