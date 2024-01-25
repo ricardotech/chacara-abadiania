@@ -18,7 +18,7 @@ import { FiClock, FiCompass, FiStar, FiUmbrella } from "react-icons/fi";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { FaBridgeWater, FaLandmark, FaLandmarkFlag } from "react-icons/fa6";
 import { BiHome, BiWater } from "react-icons/bi";
-import { BsTreeFill, BsTruck } from "react-icons/bs";
+import { BsTreeFill, BsTruck, BsWhatsapp } from "react-icons/bs";
 import { PiBoot } from "react-icons/pi";
 import { GiPlantRoots } from "react-icons/gi";
 import { useEffect, useState } from "react";
@@ -470,10 +470,27 @@ src="https://www.facebook.com/tr?id=753642966276372&ev=PageView&noscript=1"
         </Flex>
         <Flex w="100%" borderTop="1px solid #EEE" align="center" py="40px">
           <Text color="#555" w="100%" textAlign="center" fontSize="1.2rem">
-            Lélia Patricia | Whatsapp (62) 98126-8480 |{" "}
+            Lélia Patricia | (62) 98126-8480 |{" "}
             <span style={{ fontWeight: "bold" }}>CRECI 26.845</span>
           </Text>
         </Flex>
+      </Flex>
+      <Flex
+        position="fixed"
+        bottom="20px"
+        right="20px"
+        bg="#319795"
+        borderRadius={40}
+        w="40px"
+        h="40px"
+        justify="center"
+        align="center"
+        cursor="pointer"
+        onClick={() => {
+          router.push("https://wa.me/5562981268480");
+        }}
+      >
+        <Icon as={BsWhatsapp} color="#FFF" />
       </Flex>
       <Modal
         isOpen={activeImage !== ""}
