@@ -480,9 +480,9 @@ src="https://www.facebook.com/tr?id=753642966276372&ev=PageView&noscript=1"
         bottom="20px"
         right="20px"
         bg="#319795"
-        borderRadius={40}
-        w="40px"
-        h="40px"
+        borderRadius={50}
+        w="50px"
+        h="50px"
         justify="center"
         align="center"
         cursor="pointer"
