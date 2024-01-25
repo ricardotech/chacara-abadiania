@@ -468,7 +468,7 @@ src="https://www.facebook.com/tr?id=753642966276372&ev=PageView&noscript=1"
             </Button>
           )}
         </Flex>
-        <Flex w="100%" borderTop="1px solid #EEE" align="center">
+        <Flex w="100%" borderTop="1px solid #EEE" align="center" py="40px">
           <Text color="#555" w="100%" textAlign="center" fontSize="1.2rem">
             Lélia Patricia | Whatsapp (62) 98126-8480 |{" "}
             <span style={{ fontWeight: "bold" }}>CRECI 26.845</span>
