@@ -33,19 +33,6 @@ export default function App({
     proTheme
   );
 
-  useEffect(() => {
-    import("react-facebook-pixel")
-      .then((x) => x.default)
-      .then((ReactPixel) => {
-        ReactPixel.init("753642966276372"); // facebookPixelId
-        ReactPixel.pageView();
-
-        router.events.on("routeChangeComplete", () => {
-          ReactPixel.pageView();
-        });
-      });
-  }, [router.events]);
-
   return (
     <UtilsProvider>
       <ChakraProvider theme={myTheme}>

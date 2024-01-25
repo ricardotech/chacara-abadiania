@@ -21,7 +21,7 @@ import { BiHome, BiWater } from "react-icons/bi";
 import { BsTreeFill, BsTruck } from "react-icons/bs";
 import { PiBoot } from "react-icons/pi";
 import { GiPlantRoots } from "react-icons/gi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 export default function Home() {
@@ -66,6 +66,19 @@ export default function Home() {
       </Flex>
     );
   };
+
+  useEffect(() => {
+    import("react-facebook-pixel")
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init("753642966276372");
+        ReactPixel.pageView();
+
+        router.events.on("routeChangeComplete", () => {
+          ReactPixel.pageView();
+        });
+      });
+  }, [router.events]);
 
   return (
     <>
