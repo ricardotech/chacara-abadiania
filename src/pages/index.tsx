@@ -268,7 +268,7 @@ src="https://www.facebook.com/tr?id=753642966276372&ev=PageView&noscript=1"
             flexDir="column"
           >
             <Text fontSize="1.5rem" fontWeight="bold" textAlign="center">
-              256.000m²
+              344.000m²
             </Text>
             <Text textAlign="center" color="#555">
               Área total
