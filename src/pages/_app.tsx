@@ -8,6 +8,7 @@ import "@fontsource/poppins";
 
 import Head from "next/head";
 import { UtilsProvider } from "@/contexts/UtilsContext";
+import { useEffect } from "react";
 
 export default function App({
   Component,
@@ -31,6 +32,19 @@ export default function App({
     },
     proTheme
   );
+
+  useEffect(() => {
+    import("react-facebook-pixel")
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init("753642966276372"); // facebookPixelId
+        ReactPixel.pageView();
+
+        router.events.on("routeChangeComplete", () => {
+          ReactPixel.pageView();
+        });
+      });
+  }, [router.events]);
 
   return (
     <UtilsProvider>
