@@ -8,7 +8,6 @@ import "@fontsource/poppins";
 
 import Head from "next/head";
 import { UtilsProvider } from "@/contexts/UtilsContext";
-import { useEffect } from "react";
 
 export default function App({
   Component,
@@ -47,7 +46,7 @@ export default function App({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '757900815722061');
+            fbq('init', '753642966276372');
             fbq('track', 'PageView');
           `}
         </script>
@@ -56,7 +55,7 @@ export default function App({
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=757900815722061&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=753642966276372&ev=PageView&noscript=1"
           />
         </noscript>
         {/* End Meta Pixel Code */}
