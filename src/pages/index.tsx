@@ -68,6 +68,23 @@ export default function Home() {
     );
   };
 
+  const ButtonCadastro = () => {
+    return (
+      <Button
+        id="botao-cadastro"
+        onClick={() => {
+          router.push("https://wa.me/5562981268480");
+        }}
+        maxW="sm"
+        size={dimensions.isDesktop ? "md" : "sm"}
+        fontSize={dimensions.isDesktop ? "md" : "sm"}
+        px="30px"
+      >
+        Entre em contato
+      </Button>
+    );
+  };
+
   return (
     <>
       <Head>
@@ -104,29 +121,7 @@ export default function Home() {
           <Text fontSize={dimensions.isDesktop ? "1.5rem" : "1rem"}>
             Chácara em Abadiânia
           </Text>
-          {dimensions.isMobile ? (
-            <Button
-              onClick={() => {
-                router.push("https://wa.me/5562981268480");
-              }}
-              maxW="sm"
-              size={dimensions.isDesktop ? "md" : "sm"}
-              fontSize={dimensions.isDesktop ? "md" : "sm"}
-            >
-              Entre em contato
-            </Button>
-          ) : (
-            <Button
-              onClick={() => {
-                router.push("https://wa.me/5562981268480");
-              }}
-              maxW="sm"
-              size={dimensions.isDesktop ? "md" : "sm"}
-              fontSize={dimensions.isDesktop ? "md" : "sm"}
-            >
-              Entre em contato com o proprietário
-            </Button>
-          )}
+          <ButtonCadastro />
         </Flex>
         <Flex h="80px" />
         <Flex
@@ -156,33 +151,6 @@ export default function Home() {
             >
               Água de Córrego, Terra Fértil e Localização Perfeita!
             </Text>
-            {dimensions.isDesktop ? (
-              <Button
-                onClick={() => {
-                  router.push("https://wa.me/5562981268480");
-                }}
-                mx="auto"
-                mt="20px"
-                px="40px"
-                maxW="sm"
-              >
-                Entre em contato com o proprietário
-              </Button>
-            ) : (
-              <Button
-                onClick={() => {
-                  router.push("https://wa.me/5562981268480");
-                }}
-                mx="auto"
-                mt="20px"
-                px="40px"
-                maxW="sm"
-              >
-                {dimensions.isMobile
-                  ? "Entre em contato"
-                  : "Entre em contato com o proprietário"}
-              </Button>
-            )}
           </Flex>
           <Image
             mt={dimensions.isDesktop ? 0 : "20px"}
@@ -374,37 +342,10 @@ export default function Home() {
         >
           R$ 2.900.000,00
         </Text>
-        <Flex px="20px" w="100%">
-          {dimensions.isMobile ? (
-            <Button
-              mb="80px"
-              onClick={() => {
-                router.push("https://wa.me/5562981268480");
-              }}
-              maxW="sm"
-              px="20px"
-              w="100%"
-              size={dimensions.isDesktop ? "md" : "sm"}
-              fontSize={dimensions.isDesktop ? "md" : "sm"}
-            >
-              Entre em contato
-            </Button>
-          ) : (
-            <Button
-              mb="80px"
-              onClick={() => {
-                router.push("https://wa.me/5562981268480");
-              }}
-              px="20px"
-              mx="auto"
-              w="100%"
-              maxW="sm"
-              size={dimensions.isDesktop ? "md" : "sm"}
-              fontSize={dimensions.isDesktop ? "md" : "sm"}
-            >
-              Entre em contato com o proprietário
-            </Button>
-          )}
+        <Flex px="20px" w="100%" mb="80px">
+          <Flex w="100%" mx="auto" justify="center">
+            <ButtonCadastro />
+          </Flex>
         </Flex>
         <Flex w="100%" borderTop="1px solid #EEE" align="center" py="20px">
           <Text color="#555" w="100%" textAlign="center" fontSize="1.2rem">
