@@ -340,7 +340,7 @@ export default function Home() {
           mb="20px"
           fontSize={dimensions.isDesktop ? "3.5rem" : "2.5rem"}
         >
-          R$ 2.900.000,00
+          R$ 2.500.000,00
         </Text>
         <Flex px="20px" w="100%" mb="80px">
           <Flex w="100%" mx="auto" justify="center">
